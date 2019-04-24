@@ -66,13 +66,14 @@ int main()
 		}
 	}
 
-
 	//插入排序
 	for (size_t i = 0; i < length; i++)
 	{
 		std::cout << arrayA[i] << "=";
 	}
 	std::cout << std::endl;
+
+	//快速排序
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
