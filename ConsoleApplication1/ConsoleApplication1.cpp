@@ -66,12 +66,15 @@ int main()
 		}
 	}
 
-	//插入排序
 	for (size_t i = 0; i < length; i++)
 	{
 		std::cout << arrayA[i] << "=";
 	}
 	std::cout << std::endl;
+
+
+	//插入排序
+
 
 	//快速排序
 }
