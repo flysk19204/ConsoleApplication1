@@ -4,7 +4,7 @@
 #include "pch.h"
 #include <iostream>
 using namespace std;
-
+//快速排序
 void Qsort(int arr[], int low, int high) {
 	if (high <= low) return;
 	int i = low;
@@ -40,6 +40,38 @@ void Qsort(int arr[], int low, int high) {
 	Qsort(arr, low, j - 1);
 	Qsort(arr, j + 1, high);
 }
+
+
+//斐波那契数列 递归
+ int fibonacci1(int i) {
+	if (i <= 0) {
+		return 0;
+	}
+	if (i == 1) {
+		return 1;
+	}
+	return fibonacci1(i - 1) + fibonacci1(i - 2);
+}
+
+ //普通循环
+ int fibonacci2(int n)
+ {
+	 if (n <= 0) {
+		 return 0;
+	 }
+	 if (n == 1) {
+		 return 1;
+	 }
+	 int fibNMinusOne = 0;
+	 int fibNMinusTwo = 1;
+	 int fibN = 0;
+	 for (int i = 2; i <= n; i++) {
+		 fibN = fibNMinusOne + fibNMinusTwo;
+		 fibNMinusOne = fibNMinusTwo;
+		 fibNMinusTwo = fibN;
+	 }
+	 return fibN;
+ }
 
 
 int main()
@@ -145,20 +177,18 @@ int main()
 	//}
 	//std::cout << std::endl;
 
-	//快速排序 选中1个轴  小的放左边序列 大的放右边序列 重复操作 一直到没有轴
-	
-	
-	int a[] = { 57, 68, 59, 52, 72, 28, 96, 33, 24 };
+	//快速排序 
+	//int a[] = { 57, 68, 59, 52, 72, 28, 96, 33, 24 };
 
-	Qsort(a, 0, sizeof(a) / sizeof(a[0]) - 1);/*这里原文第三个参数要减1否则内存越界*/
+	//Qsort(a, 0, sizeof(a) / sizeof(a[0]) - 1);/*这里原文第三个参数要减1否则内存越界*/
 
-	for (int i = 0; i < sizeof(a) / sizeof(a[0]); i++)
-	{
-		cout << a[i] << " ";
-	}
+	//for (int i = 0; i < sizeof(a) / sizeof(a[0]); i++)
+	//{
+	//	cout << a[i] << " ";
+	//}
 
-
-
+	//斐波那契数列
+	int b = fibonacci1(3);
 	
 
 
